@@ -1,13 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 // import { Container } from './styles';
 
 const PickUpLine: React.FC = () => {
-  return (
-    <div>
-      Test
-    </div>
-  );
+    return <div>Test</div>
 }
 
-export default PickUpLine;
+export default PickUpLine

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 // import { Container } from './styles';
 
 const Menu: React.FC = () => {
-  return <div />;
+    return <div>teste bla bla</div>
 }
 
-export default Menu;
+export default Menu

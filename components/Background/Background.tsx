@@ -1,14 +1,12 @@
 import styles from './Background.module.scss'
 
 type BackgroundProps = {
-  children: any
+    children: any
 }
 
-
-const Background = ({children}: BackgroundProps): JSX.Element => {
-  return <div className={styles.background}>
-    {children}
-  </div>;
+// eslint-disable-next-line no-undef
+const Background = ({ children }: BackgroundProps): JSX.Element => {
+    return <div className={styles.background}>{children}</div>
 }
 
-export default Background;
+export default Background
