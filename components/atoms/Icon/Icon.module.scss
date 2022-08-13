@@ -1,0 +1,7 @@
+$number: 64;
+
+//TODO esse tambem precisa ser dinamico
+.icon-size-#{$number} {
+    width: #{$number}px;
+    height: #{$number}px;
+}

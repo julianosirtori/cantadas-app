@@ -1,0 +1,13 @@
+//TODO: finalizar o style do button
+.button-icon {
+    background: none;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}
