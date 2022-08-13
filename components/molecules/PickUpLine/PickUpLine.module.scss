@@ -5,10 +5,19 @@
     justify-content: center;
     width: 100%;
     max-width: 820px;
+    padding: 8px;
 }
 
 .pickUpLine__title {
-    margin-top: 56px;
     font-size: 64px;
     text-align: center;
+    margin-bottom: 56px;
+
+    @include md {
+        font-size: 48px;
+    }
+
+    @include sm {
+        font-size: 28px;
+    }
 }

@@ -1,7 +1,8 @@
-$number: 64;
+$sizes: 16px, 32px, 64px;
 
-//TODO esse tambem precisa ser dinamico
-.icon-size-#{$number} {
-    width: #{$number}px;
-    height: #{$number}px;
+@each $size in $sizes {
+    .icon-size-#{$size} {
+        height: $size;
+        width: $size;
+    }
 }

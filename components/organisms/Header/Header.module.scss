@@ -1,7 +1,18 @@
+@import '../../../styles/global';
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     width: 100%;
     padding: 32px;
+
+    @include sm {
+        padding: 16px;
+
+        svg {
+            height: 32px;
+            width: 32px;
+        }
+    }
 }

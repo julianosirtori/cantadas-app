@@ -4,4 +4,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include sm {
+        max-width: 280px;
+        svg {
+            height: 48px;
+            width: 48px;
+        }
+    }
 }

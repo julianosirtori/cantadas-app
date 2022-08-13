@@ -8,13 +8,13 @@ const Navigation = () => {
     return (
         <Wrapper element="section" className={styles.navigation}>
             <Button variant="icon" aria-label="previous">
-                <Icon icon="prev" size={64} />
+                <Icon icon="prev" />
             </Button>
             <Button variant="icon" aria-label="reload">
-                <Icon icon="reload" size={64} />
+                <Icon icon="reload" />
             </Button>
             <Button variant="icon" aria-label="next">
-                <Icon icon="next" size={64} />
+                <Icon icon="next" />
             </Button>
         </Wrapper>
     )
