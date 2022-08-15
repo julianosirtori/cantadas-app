@@ -39,10 +39,9 @@ jobs:
             - name: Build Project Artifacts
               run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
             - name: Deploy Project Artifacts to Vercel
+              run: url=`vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}`
             - id: deploy
-              run: |
-                  url=`vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}`
-                  echo "::set-output name=url::$url"
+              run: echo "::set-output name=url::$url"
 
     deploy-prod:
         runs-on: ubuntu-latest
