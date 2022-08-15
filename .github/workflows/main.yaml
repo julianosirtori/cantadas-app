@@ -1,4 +1,4 @@
-name: Deploy DEV & PROD
+name: Deploy Preview and Prod
 env:
     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -27,7 +27,8 @@ jobs:
     deploy-dev:
         runs-on: ubuntu-latest
         environment:
-            name: dev
+            name: preview
+            url: ${{ steps.deploy.outputs.url }}
         needs: build
         steps:
             - uses: actions/checkout@v2
@@ -38,7 +39,10 @@ jobs:
             - name: Build Project Artifacts
               run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
             - name: Deploy Project Artifacts to Vercel
-              run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+            - id: deploy
+              run: |
+                  url=`vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}`
+                  echo "::set-output name=url::$url"
 
     deploy-prod:
         runs-on: ubuntu-latest
