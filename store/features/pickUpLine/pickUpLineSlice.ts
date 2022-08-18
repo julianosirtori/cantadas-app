@@ -32,11 +32,12 @@ export const pickUpLineSlice = createSlice({
         },
         next: (state: PickUpLineState) => {
             state.soundUrl = getRandomSoundUrl(sounds.sounds)
-            if (state.currentIndex >= state.pickUpLines.length) {
+            const newIndex = state.currentIndex + 1
+            if (newIndex === state.pickUpLines.length) {
                 state.currentIndex = 0
                 return
             }
-            state.currentIndex += 1
+            state.currentIndex = newIndex
         },
         reload: (state: PickUpLineState) => {
             state.soundUrl = getRandomSoundUrl(sounds.sounds)
@@ -66,6 +67,7 @@ export const pickUpLineSlice = createSlice({
 export const { next, reload, prev, init } = pickUpLineSlice.actions
 
 export const getPickUpLines = (state: AppState) => {
+    console.log(state.pickUpLine.currentIndex)
     return state.pickUpLine.pickUpLines[state.pickUpLine.currentIndex]
 }
 
