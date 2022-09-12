@@ -3,7 +3,24 @@
     max-width: 320px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+
+    button {
+        width: 240px;
+        span {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        @include md {
+            width: 180px;
+            padding: 2px 4px;
+
+            span {
+                font-size: 22px;
+            }
+        }
+    }
 
     @include sm {
         max-width: 280px;

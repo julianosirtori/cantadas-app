@@ -30,18 +30,6 @@ describe('PickUpLine redux state tests', () => {
         expect(state.currentIndex).toBe(6)
     })
 
-    it('Should set currentIndex zero if currentIndex is last index', async () => {
-        jest.spyOn(global.Math, 'floor').mockReturnValue(
-            data.pickUpLines.length
-        )
-        store.dispatch(pickUpLineSlice.init())
-        store.dispatch(pickUpLineSlice.next())
-
-        const state = store.getState().pickUpLine
-
-        expect(state.currentIndex).toBe(0)
-    })
-
     it('Should decrement currentIndex if call prev', async () => {
         store.dispatch(pickUpLineSlice.init())
         store.dispatch(pickUpLineSlice.prev())

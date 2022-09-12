@@ -1,5 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { getPickUpLines, init } from 'store/features/pickUpLine/pickUpLineSlice'
+import copy from 'copy-to-clipboard'
+import { toast } from 'react-toastify'
 
 import Wrapper from 'components/atoms/Wrapper'
 import Text from 'components/atoms/Text'
@@ -21,6 +23,11 @@ const PickUpLine = ({ className, ...props }: PickUpLineProps) => {
         dispatch(init())
     }, [])
 
+    const copyText = () => {
+        copy(pickUpLine)
+        toast('copiado')
+    }
+
     return (
         <Wrapper
             element="main"
@@ -28,6 +35,7 @@ const PickUpLine = ({ className, ...props }: PickUpLineProps) => {
             {...props}
         >
             <Text
+                onClick={() => copyText()}
                 element="h1"
                 className={styles.pickUpLine__title}
             >{`"${pickUpLine}"`}</Text>

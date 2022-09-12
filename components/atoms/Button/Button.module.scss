@@ -11,3 +11,18 @@
         opacity: 0.5;
     }
 }
+
+.button-outline {
+    background: none;
+    border: 1px solid #fff;
+    padding: 8px 32px;
+    border-radius: 4px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}

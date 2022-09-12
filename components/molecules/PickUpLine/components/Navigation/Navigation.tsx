@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux'
-import { prev, reload, next } from 'store/features/pickUpLine/pickUpLineSlice'
+import { reload } from 'store/features/pickUpLine/pickUpLineSlice'
 
-import Icon from 'components/atoms/Icon'
+import Text from 'components/atoms/Text'
 import Button from 'components/atoms/Button'
 import Wrapper from 'components/atoms/Wrapper'
 
@@ -13,25 +13,11 @@ const Navigation = () => {
     return (
         <Wrapper element="section" className={styles.navigation}>
             <Button
-                onClick={() => dispatch(prev())}
-                variant="icon"
-                aria-label="previous"
-            >
-                <Icon icon="prev" />
-            </Button>
-            <Button
                 onClick={() => dispatch(reload())}
-                variant="icon"
+                variant="outline"
                 aria-label="reload"
             >
-                <Icon icon="reload" />
-            </Button>
-            <Button
-                onClick={() => dispatch(next())}
-                variant="icon"
-                aria-label="next"
-            >
-                <Icon icon="next" />
+                <Text>Gerar</Text>
             </Button>
         </Wrapper>
     )

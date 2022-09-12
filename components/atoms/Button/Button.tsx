@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './Button.module.scss'
 interface ButtonProps extends React.BaseHTMLAttributes<HTMLButtonElement> {
-    variant?: 'icon'
+    variant?: 'icon' | 'outline'
     [key: string]: any
 }
 

@@ -67,7 +67,6 @@ export const pickUpLineSlice = createSlice({
 export const { next, reload, prev, init } = pickUpLineSlice.actions
 
 export const getPickUpLines = (state: AppState) => {
-    console.log(state.pickUpLine.currentIndex)
     return state.pickUpLine.pickUpLines[state.pickUpLine.currentIndex]
 }
 

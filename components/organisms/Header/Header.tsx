@@ -3,7 +3,10 @@ import { useSelector } from 'react-redux'
 
 import useSound from 'use-sound'
 
-import { getSoundUrl } from 'store/features/pickUpLine/pickUpLineSlice'
+import {
+    getSoundUrl,
+    getPickUpLines,
+} from 'store/features/pickUpLine/pickUpLineSlice'
 import Button from 'components/atoms/Button'
 import Icon from 'components/atoms/Icon'
 
@@ -12,6 +15,7 @@ import styles from './Header.module.scss'
 const Header = () => {
     const [soundActive, setSoundActive] = useState(true)
     const soundUrl = useSelector(getSoundUrl)
+    const pickUpLine = useSelector(getPickUpLines)
 
     const [play, { stop }] = useSound(soundUrl)
 
@@ -23,7 +27,7 @@ const Header = () => {
         return () => {
             stop()
         }
-    }, [play])
+    }, [play, pickUpLine])
 
     useEffect(() => {
         if (!soundActive) {
