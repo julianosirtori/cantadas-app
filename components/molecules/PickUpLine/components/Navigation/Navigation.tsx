@@ -16,6 +16,7 @@ const Navigation = () => {
                 onClick={() => dispatch(reload())}
                 variant="outline"
                 aria-label="reload"
+                data-testid="button-generate"
             >
                 <Text>Gerar</Text>
             </Button>

@@ -37,6 +37,8 @@ const PickUpLine = ({ className, ...props }: PickUpLineProps) => {
             <Text
                 onClick={() => copyText()}
                 element="h1"
+                color="white"
+                data-testid="text-pickUpLine"
                 className={styles.pickUpLine__title}
             >{`"${pickUpLine}"`}</Text>
 
