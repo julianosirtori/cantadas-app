@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
-                <title>Pick Up</title>
+                <title>Cantadas</title>
             </Head>
             <Component {...pageProps} />
             <ToastContainer />
