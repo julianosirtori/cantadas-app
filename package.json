@@ -15,7 +15,7 @@
     "dependencies": {
         "@reduxjs/toolkit": "^1.8.4",
         "copy-to-clipboard": "^3.3.2",
-        "next": "12.2.3",
+        "next": "12.2.4",
         "next-redux-wrapper": "^7.0.5",
         "react": "18.2.0",
         "react-dom": "18.2.0",
