@@ -2,7 +2,7 @@ import iconPath, { IconType } from './IconsSvg'
 import styles from './Icon.module.scss'
 
 export type IconProps = {
-    size?: 16 | 32 | 64
+    size?: 16 | 32 | 56 | 64
     icon: IconType
     color?: string
 }

@@ -1,4 +1,4 @@
-$sizes: 16px, 32px, 64px;
+$sizes: 16px, 32px, 56px, 64px;
 
 @each $size in $sizes {
     .icon-size-#{$size} {

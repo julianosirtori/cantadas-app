@@ -1,14 +1,12 @@
+import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getPickUpLines, init } from 'store/features/pickUpLine/pickUpLineSlice'
-import copy from 'copy-to-clipboard'
-import { toast } from 'react-toastify'
-
 import Wrapper from 'components/atoms/Wrapper'
 import Text from 'components/atoms/Text'
 
 import Navigation from './components/Navigation'
 import styles from './PickUpLine.module.scss'
-import { useEffect } from 'react'
+import useCopyPickUpLine from 'utils/hooks/useCopyPickUpLine'
 
 type PickUpLineProps = {
     className?: string
@@ -17,16 +15,13 @@ type PickUpLineProps = {
 const PickUpLine = ({ className, ...props }: PickUpLineProps) => {
     const pickUpLine = useSelector(getPickUpLines)
     const dispatch = useDispatch()
+    const copyPickUpLine = useCopyPickUpLine()
 
     // https://nextjs.org/docs/messages/react-hydration-error
     useEffect(() => {
         dispatch(init())
     }, [])
 
-    const copyText = () => {
-        copy(pickUpLine)
-        toast('copiado')
-    }
 
     return (
         <Wrapper
@@ -35,7 +30,7 @@ const PickUpLine = ({ className, ...props }: PickUpLineProps) => {
             {...props}
         >
             <Text
-                onClick={() => copyText()}
+                onClick={() => copyPickUpLine()}
                 element="h1"
                 color="white"
                 data-testid="text-pickUpLine"
