@@ -17,12 +17,12 @@ const Navigation = () => {
     return (
         <Wrapper element="section" className={styles.navigation}>
             <Button
-              variant="icon"
-              aria-label='share'
-              data-testid="button-share"
-              onClick={() => copyPickUpLine()}
+                variant="icon"
+                aria-label="share"
+                data-testid="button-share"
+                onClick={() => copyPickUpLine()}
             >
-              <Icon size={56} icon='copy' />
+                <Icon size={56} icon="copy" />
             </Button>
             <Button
                 onClick={() => dispatch(next())}

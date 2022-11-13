@@ -22,7 +22,6 @@ const PickUpLine = ({ className, ...props }: PickUpLineProps) => {
         dispatch(init())
     }, [])
 
-
     return (
         <Wrapper
             element="main"

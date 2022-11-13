@@ -4,15 +4,14 @@ import { useSelector } from 'react-redux'
 import { getPickUpLines } from 'store/features/pickUpLine/pickUpLineSlice'
 
 const useCopyPickUpLine = () => {
-  const pickUpLine = useSelector(getPickUpLines)
+    const pickUpLine = useSelector(getPickUpLines)
 
-  const copyPickUpLine = () => {
-    copy(pickUpLine)
-    toast('copiado')
-  }
+    const copyPickUpLine = () => {
+        copy(pickUpLine)
+        toast('copiado')
+    }
 
-
-  return copyPickUpLine
+    return copyPickUpLine
 }
 
 export default useCopyPickUpLine
