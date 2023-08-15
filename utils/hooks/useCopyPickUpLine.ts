@@ -1,10 +1,7 @@
 import { toast } from 'react-toastify'
 import copy from 'copy-to-clipboard'
-import { useSelector } from 'react-redux'
-import { getPickUpLines } from 'store/features/pickUpLine/pickUpLineSlice'
 
-const useCopyPickUpLine = () => {
-    const pickUpLine = useSelector(getPickUpLines)
+const useCopyPickUpLine = (pickUpLine: string) => {
 
     const copyPickUpLine = () => {
         copy(pickUpLine)
