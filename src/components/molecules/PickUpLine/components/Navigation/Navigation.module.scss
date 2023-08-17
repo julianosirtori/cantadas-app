@@ -13,26 +13,27 @@
     button {
         width: 240px;
         margin-right: 16px;
+
         span {
             font-size: 32px;
             font-weight: bold;
         }
 
-        @include md {
-            width: 180px;
-            padding: 2px 4px;
+        // @include md {
+        //     width: 180px;
+        //     padding: 2px 4px;
 
-            span {
-                font-size: 22px;
-            }
-        }
+        //     span {
+        //         font-size: 22px;
+        //     }
+        // }
     }
 
-    @include sm {
-        max-width: 280px;
-        svg {
-            height: 48px;
-            width: 48px;
-        }
-    }
+    // @include sm {
+    //     max-width: 280px;
+    //     svg {
+    //         height: 48px;
+    //         width: 48px;
+    //     }
+    // }
 }

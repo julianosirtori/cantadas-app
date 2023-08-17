@@ -7,9 +7,9 @@
     max-width: 1200px;
     padding: 8px;
 
-    @include xl {
-        max-width: 820px;
-    }
+    // @include xl {
+    //     max-width: 820px;
+    // }
 }
 
 .pickUpLine__title {
@@ -21,11 +21,11 @@
         cursor: pointer;
     }
 
-    @include md {
-        font-size: 48px;
-    }
+    // @include md {
+    //     font-size: 48px;
+    // }
 
-    @include sm {
-        font-size: 28px;
-    }
+    // @include sm {
+    //     font-size: 28px;
+    // }
 }

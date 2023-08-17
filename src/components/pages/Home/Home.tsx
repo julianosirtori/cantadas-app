@@ -1,9 +1,9 @@
-import Background from 'components/atoms/Background'
-import Header from 'components/organisms/Header'
-import PickUpLineComponent from 'components/molecules/PickUpLine'
+import Background from '@/components/atoms/Background'
+import Header from '@/components/organisms/Header'
+import PickUpLineComponent from '@/components/molecules/PickUpLine'
 
 import styles from './Home.module.scss'
-import Wrapper from 'components/atoms/Wrapper'
+import Wrapper from '@/components/atoms/Wrapper'
 import { PickUpLine } from '@prisma/client'
 
 export type THomeProps = {
